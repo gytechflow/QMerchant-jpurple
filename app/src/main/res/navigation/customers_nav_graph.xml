@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/customer_nav_graph"
+    app:startDestination="@id/show_customers_fragment">
+
+    <fragment
+        android:id="@+id/show_customers_fragment"
+        android:name="cm.clear.qmerchant.modules.customer.ui.Customers"
+        android:label="CUSTOMERS"
+        tools:layout="@layout/customers_fragment">
+        <!--<argument
+            android:name="item_id"
+            android:defaultValue=""
+            app:argType="string" />-->
+    </fragment>
+</navigation>

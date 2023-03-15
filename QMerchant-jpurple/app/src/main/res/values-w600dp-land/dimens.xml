@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="fab_margin">48dp</dimen>
+    <dimen name="container_horizontal_margin">48dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+    <dimen name="resa_size">22sp</dimen>
+    <dimen name="resa_sub_size">16sp</dimen>
+    <dimen name="item_list_size">20sp</dimen>
+    <dimen name="q_list_icon_height">108dp</dimen>
+    <dimen name="q_list_icon_width">108dp</dimen>
+
+    <dimen name="ref_title_size">18sp</dimen>
+    <dimen name="hour_text_size">17sp</dimen>
+    <dimen name="resource_text_size">20sp</dimen>
+    <dimen name="ref_size">40sp</dimen>
+    <dimen name="header_size">40sp</dimen>
+    <dimen name="header_short_text_size">40sp</dimen>
+
+    <dimen name="booking_detail_ref_text_size">30sp</dimen>
+    <dimen name="booking_detail_ref_padding_size">30sp</dimen>
+    <dimen name="booking_detail_name_text_size">30sp</dimen>
+    <dimen name="text_size_15_1">20sp</dimen>
+    <dimen name="booking_detail_name_padding_size">30sp</dimen>
+    <dimen name="booking_detail_date_text_size">20sp</dimen>
+    <dimen name="booking_detail_date_padding_size">7sp</dimen>
+    <dimen name="booking_detail_time_text_size">20sp</dimen>
+    <dimen name="booking_detail_time_padding_size">8sp</dimen>
+
+    <dimen name="size__adaptable">32sp</dimen>
+    <dimen name="padding__adaptable">22sp</dimen>
+
+    <item name="booking_fragment_dialog_width_percent" type="integer" format="float">0.5</item>
+    <item name="weight_1_tablet" format="float" type="integer">1</item>
+
+    <item name="col_number" format="integer" type="integer">3</item>
+
+    <dimen name="single_table_size">240dp</dimen>
+    <dimen name="table_size">225dp</dimen>
+
+    <dimen name="table_margin">10dp</dimen>
+
+    <dimen name="table_item_size">36dp</dimen>
+    <dimen name="event_actions_dialog_height">700dp</dimen>
+    <dimen name="event_actions_text_size">30sp</dimen>
+    <dimen name="event_actions_text_padding_v">20dp</dimen>
+</resources>

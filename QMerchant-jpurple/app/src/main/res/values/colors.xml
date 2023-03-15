@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="drawer_list_element">#E6DBFA</color>
+
+
+
+
+    <color name="old_primaryColor">#7c4dff</color>
+    <color name="old_primaryLightColor">#b47cff</color>
+    <color name="old_primaryDarkColor">#3f1dcb</color>
+
+    <color name="primaryColor">#8c9eff</color>
+    <color name="primaryLightColor">#c0cfff</color>
+    <color name="primaryDarkColor">#5870cb</color>
+    <color name="secondaryColor">#8c9eff</color>
+    <color name="secondaryLightColor">#c0cfff</color>
+    <color name="secondaryDarkColor">#5870cb</color>
+    <color name="primaryTextColor">#ffffff</color>
+    <color name="secondaryTextColor">#000000</color>
+
+    <color name="assign_table0">#CFD8DC</color>
+    <color name="booking_item_normal">#E8EAF6</color>
+    <color name="booking_table_normal">#E8EAF6</color>
+    <color name="booking_table_selected">#81C784</color>
+    <color name="assign_table1">#CFD8DC</color>
+    <color name="assign_table2">#CFD8DC</color>
+    <color name="assign_table0_border">#FFFFFF</color>
+    <color name="blue_nontransparent">#1976D2</color>
+    <color name="assign_table1_border">#FFFFFF</color>
+    <color name="blue_transparent">#341976D2</color>
+    <color name="negative_red">#E57373</color>
+    <color name="red_nontransparent">#D50000</color>
+    <color name="red_transparent">#33D50000</color>
+    <color name="yellow_gold_nontransparent">#FFAB00</color>
+    <color name="yellow_gold_transparent">#33FFAB00</color>
+    <color name="low_yellow_gold_transparent">#1AFFAB00</color>
+    <color name="orange_nontransparent">#FF6D00</color>
+    <color name="orange_transparent">#33FF6D00</color>
+    <color name="scarlet_nontransparent">#DD2C00</color>
+    <color name="scarlet_transparent">#33DD2C00</color>
+    <color name="transparent">#0FFFFFFF</color>
+    <color name="black_transparent">#2F000000</color>
+    <color name="green_transparent">#2E2E7D32</color>
+
+
+</resources>

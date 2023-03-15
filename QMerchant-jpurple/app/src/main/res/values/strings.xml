@@ -1,0 +1,183 @@
+<resources>
+    <string name="app_name">QMerchant</string>
+    <string name="title_item_detail">Item Detail</string>
+    <string name="page_bookings">Bookings</string>
+    <string name="page_clients">Clients</string>
+    <string name="page_bookings_plan">Bookings Plan</string>
+    <string name="full_app_name">Quessadilla Merchant</string>
+    <string name="title_activity_dashboard">QMerchant</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">QMerchant</string>
+    <string name="second_fragment_label">QMerchant</string>
+    <string name="next_text">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="sum_on_total" translatable="false">%1$s/%2$s</string>
+
+    <string name="orders_title">Orders</string>
+    <string name="orders_desc">List of orders : Consult, confirm and process orders received from clients</string>
+    <string name="orders_title_off">No Order</string>
+
+    <string name="reservations_title">Reservations</string>
+    <string name="reservations_desc">List of reservations : Consult, confirm and process reservations sent by clients</string>
+
+    <string name="customers_title">Customers</string>
+    <string name="customers_desc">List of clients after orders or reservations. Get to know your customers.</string>
+
+    <string name="reportings_title">Data and Reportings</string>
+    <string name="reportings_desc">Data analysis and Visualization of trends to master your business.</string>
+
+    <string name="settings_title">Settings</string>
+    <string name="settings_desc">Configure your preferences and general settings to personnalize your interaction with your customers.</string>
+
+    <string name="title_activity_orders_item_detail_host">Orders Management</string>
+    <string name="title_ordersitem_list">Orders</string>
+    <string name="title_ordersitem_detail">Orders Detail</string>
+
+    <string name="orderEnabled">Orders Enabled</string>
+    <string name="orderDisabled">Orders Disabled</string>
+    <string name="reservationEnabled">Reservations Enabled</string>
+    <string name="reservationDisabled">Reservations Disabled</string>
+    <string name="moreOptions">More options</string>
+    <string name="orders_title_on">Order On</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome!"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="orders_text">Orders</string>
+    <string name="bookings_text">Bookings</string>
+    <string name="clients_text">Clients</string>
+    <string name="data_reports">Data and Reports</string>
+    <string name="settings_text">Settings</string>
+    <string name="orders_description">List of orders: Concsult, Confirm and Process orders received from clients</string>
+    <string name="bookings_description">List of Bookings: Consult, Confirm and process Bookings made by clients</string>
+    <string name="clients_description">List of clients that have ordered or booked, Get to know your customers</string>
+    <string name="data_reporting_description">Data analysis and visualization of trends to master your bussiness</string>
+    <string name="settings_description">Configure your preferences and general settings to personalize your interaction with your customers</string>
+    <string name="new_text">New</string>
+    <string name="confirmed_text">Confirmed</string>
+    <string name="done_text">Done</string>
+    <string name="description_text">Description</string>
+    <string name="unit_price_text">U.P</string>
+    <string name="qty_text">Qty</string>
+    <string name="total_text">Total</string>
+    <string name="confirm_text">Confirm</string>
+    <string name="cancel_text">Cancel</string>
+    <string name="close_text">Close</string>
+    <string name="to_kitchen">To Kitchen</string>
+    <string name="to_delivery">To Delivery</string>
+    <string name="delivered">Delivered</string>
+    <string name="ready_for_delivery">Ready for Delivery</string>
+    <string name="in_process">In Process</string>
+    <string name="assigned">Assigned</string>
+    <string name="completed">Completed</string>
+    <string name="assign">Allocate</string>
+    <string name="modify">Modify</string>
+    <string name="customer_id">Customer-ID</string>
+    <string name="names">Names</string>
+    <string name="email">Email</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="places">Places</string>
+    <string name="type">Type</string>
+    <string name="select_start_date">Select Start Date</string>
+    <string name="select_start_time">Select Start Time</string>
+    <string name="create">Create</string>
+    <string name="all_text">All</string>
+    <string name="details">Details</string>
+    <string name="canceled">Canceled</string>
+
+    <!--    Setting module-->
+    <string name="notif">Notifications</string>
+    <string name="notif_detail">Mail notifications</string>
+    <string name="users"> Users</string>
+    <string name="users_detail">User Info</string>
+    <string name="order">Orders</string>
+    <string name="new_order">New Order</string>
+    <string name="new_order_details">Send email notification when new order</string>
+    <string name="order_conf">Order Confirmation</string>
+    <string name="order_conf_detail">Send email notification when order is confirm</string>
+    <string name="order_delivery">Order Delivery</string>
+    <string name="order_delivery_detail">Send email notification when order is completed</string>
+    <string name="order_cancel">Order Canceling</string>
+    <string name="order_cancel_detail">Send email notification when order is cancelled</string>
+
+    <string name="booking">Booking</string>
+    <string name="new_booking">New Booking</string>
+    <string name="new_booking_detail">Send email notification when new booking</string>
+    <string name="booking_conf">Booking Confirmation</string>
+    <string name="booking_conf_detail">Send email notification when booking is confirm</string>
+    <string name="booking_cancel"> Booking Cancelling</string>
+    <string name="booking_cancel_detail">Send email notification when cancelled booking </string>
+    <string name="booking_completed">Booking Completed</string>
+    <string name="booking_completed_detail">Send email notification when booking customer is present</string>
+    <string name="booking_absence">Booking Absence</string>
+    <string name="booking_absence_detail">Send email notification when booking customer is absent</string>
+
+    <string name="source">Source</string>
+    <string name="visual">Visual</string>
+    <string name="apply">Apply</string>
+    <string name="apply_message">Apply these changes? </string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="updateSucessfull">Update Successful</string>
+    <string name="updateUnSucessfull">Failled to update</string>
+    <string name="updateFaillure"> Update Faillure</string>
+    <string name="product">Product</string>
+    <string name="event_date">Event Date</string>
+    <string name="event_time">Event Time</string>
+    <string name="event_type">Event Type</string>
+    <string name="number_of_places">Number of Places</string>
+    <string name="id">ID</string>
+    <string name="phone">Phone</string>
+    <string name="module">Modules</string>
+    <string name="media">Media</string>
+    <string name="OrderAvDesc">Enable or disable orders</string>
+    <string name="BookingAvDesc">Enable or disable booking</string>
+    <string name="MediaAvDesc">Enable or disable media</string>
+    <string name="edit">Edit</string>
+    <string name="update">Update</string>
+    <string name="api_url_and_key">Api Config</string>
+    <string name="api_url_and_key_desc">Configure Server Url And Api key</string>
+    <string name="server_url">Server Url</string>
+    <string name="api_key">Api Key</string>
+    <string name="tables">Tables</string>
+    <string name="tables_desc">List of tables : Consult, confirm and process tables and events they are assigned to</string>
+    <string name="event_start_time">Beginning</string>
+    <string name="event_end_time">End</string>
+    <string name="occupy">Occupy</string>
+    <string name="instant_occupation">Instant Occupation</string>
+    <string name="coupons_title">Coupons</string>
+    <string name="coupons_desc">List of Coupons : Create, consult and discard coupons</string>
+    <string name="expiry_date">Expiry Date</string>
+    <string name="amount">Amount</string>
+    <string name="used_coupons">Used</string>
+    <string name="un_used_coupons">Unused</string>
+    <string name="canceled_coupons">Canceled</string>
+    <string name="empty_amount">Type-in the amount please</string>
+    <string name="empty_email">Enter the email please</string>
+    <string name="empty_expiry_date">Please select the expiry date</string>
+    <string name="your_coupon">Your Coupon</string>
+    <string name="use_coupon">"Use "</string>
+    <string name="cancel_coupon">"Cancel "</string>
+    <string name="notify_new_booking">A New Booking Was Made</string>
+    <string name="notification_service_title">Notification Service Running</string>
+    <string name="notify_new_order">New Order Made</string>
+    <string name="service_running">Service Running</string>
+    <string name="morning">Morning</string>
+    <string name="evening">Evening</string>
+    <string name="client_arrived">Arrived</string>
+    <string name="client_canceled">Canceled</string>
+    <string name="client_absent">Absent</string>
+    <string name="event_action">Event Action</string>
+
+
+</resources>

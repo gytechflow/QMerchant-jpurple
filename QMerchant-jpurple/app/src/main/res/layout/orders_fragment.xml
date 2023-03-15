@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?><!-- Adding the same root's ID for view binding as other layout configurations -->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="view_model"
+            type="cm.clear.qmerchant.modules.orders.ui.OrdersViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ordersitem_list_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/toggleButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:orientation="vertical"
+            app:setAdapter="@{view_model.toggleAdapter}"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:spanCount="2"
+            tools:itemCount="4"
+            tools:listitem="@layout/toggle_options_item" />
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/progress_bar"
+            android:visibility="@{view_model.progressBarVisibility}"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="5dp"
+            android:indeterminate="true"
+            android:progressTint="@color/secondaryColor"
+            app:layout_constraintBottom_toTopOf="@+id/swiperefresh"
+            app:layout_constraintTop_toBottomOf="@+id/toggleButton" />
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swiperefresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:setOnRefreshListener="@{()->view_model.refresh()}"
+            app:setRefreshing="@{view_model.loading}"
+            app:layout_constrainedHeight="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/progress_bar">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/ordersitem_list"
+                android:name="cm.clear.qmerchant.orders.OrdersItemListFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/container_margin"
+                android:layout_marginEnd="@dimen/container_margin"
+                app:setAdapter="@{view_model.adapter}"
+                app:addOnScrollListener="@{view_model.scrollListener}"
+                app:layoutManager="LinearLayoutManager"
+                tools:context="cm.clear.qmerchant.orders.ui."
+                tools:listitem="@layout/item_order_list" />
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

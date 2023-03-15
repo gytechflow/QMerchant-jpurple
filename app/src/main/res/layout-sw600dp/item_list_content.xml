@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:id="@+id/sub_background"
+    android:background="@drawable/booking_item_normal_text_background"
+    android:clickable="true"
+    android:foreground="?attr/selectableItemBackground"
+    android:focusable="true"
+    android:orientation="horizontal"
+    android:padding="2dp"
+    android:layout_marginTop="2dp">
+
+    <LinearLayout
+        android:id="@+id/main_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/q_list_icon_width"
+            android:layout_height="@dimen/q_list_icon_height"
+            android:src="@drawable/qpurple_foreground"/>
+
+        <TextView
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/text_margin"
+            android:fontFamily="monospace"
+            android:gravity="start|center"
+            android:text="111"
+            android:textSize="@dimen/item_list_size"
+            android:textStyle="bold"
+            android:textColor="#030946"/>
+    </LinearLayout>
+</LinearLayout>

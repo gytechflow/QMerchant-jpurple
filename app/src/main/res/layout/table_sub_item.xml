@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View"/>
+        <variable
+            name="dialog"
+            type="android.view.View.OnLongClickListener" />
+
+        <import type="android.graphics.Color" />
+
+        <variable
+            name="viewManager"
+            type="cm.clear.qmerchant.modules.tables.ui.table_events.EventViewManager" />
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/main_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layoutHeight="@{viewManager.height}"
+            android:orientation="horizontal"
+            app:layoutMarginTop="@{viewManager.getMarginTop(mainBg.getContext())}"
+            android:onLongClickListener="@{(view)->viewManager.onLongClick(view)}"
+            android:background="@drawable/white_secnd_color_margin_bottom"
+            app:background="@{viewManager.background}"
+            >
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/secondaryDarkColor"
+                android:gravity="center"
+                android:text="@{viewManager.event.names}"
+                android:maxLines="1"
+                android:textAlignment="center"
+                android:layout_weight="4"/>
+
+            <TextView
+                android:id="@+id/startTime"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/secondaryDarkColor"
+                android:gravity="center"
+                android:text="@{viewManager.startTime}"
+                android:textAlignment="center"
+                android:layout_weight="4"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/secondaryDarkColor"
+                android:text="-"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:layout_weight="5"/>
+
+            <TextView
+                android:id="@+id/endTime"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/secondaryDarkColor"
+                android:gravity="center"
+                android:text="@{viewManager.endTime}"
+                android:textAlignment="center"
+                android:layout_weight="4"/>
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="3dp"/>
+            <TextView
+                android:id="@+id/capacity"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/secondaryDarkColor"
+                android:background="@{viewManager.state_color}"
+                android:gravity="center"
+                android:text="@{viewManager.places}"
+                android:textAlignment="center"
+                android:layout_weight="5"/>
+
+
+
+        </LinearLayout>
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:visibility="@{viewManager.loading?View.VISIBLE:View.GONE}"
+            app:indicatorColor="@color/black"
+            android:indeterminate="true"
+            />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</layout>

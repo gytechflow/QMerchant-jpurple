@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="item_width">200dp</dimen>
+    <dimen name="app_bar_height">200dp</dimen>
+    <dimen name="text_margin">6dp</dimen>
+    <dimen name="text_no_margin">0dp</dimen>
+    <dimen name="container_margin">2dp</dimen>
+    <dimen name="container_horizontal_margin">16dp</dimen>
+    <dimen name="q_list_icon_height">70dp</dimen>
+    <dimen name="q_list_icon_width">100dp</dimen>
+
+    <dimen name="resa_size">15sp</dimen>
+    <dimen name="resa_sub_size">12sp</dimen>
+    <dimen name="item_list_size">20sp</dimen>
+    <dimen name="item_list_padding_vertical">30sp</dimen>
+    <dimen name="item_list_content_margin">10sp</dimen>
+
+    <dimen name="ref_title_size">11sp</dimen>
+    <dimen name="hour_text_size">11sp</dimen>
+    <dimen name="resource_text_size">10sp</dimen>
+    <dimen name="ref_size">16sp</dimen>
+    <dimen name="header_size">30sp</dimen>
+    <dimen name="header_short_text_size">20sp</dimen>
+
+    <dimen name="booking_detail_ref_text_size">30sp</dimen>
+    <dimen name="booking_detail_ref_padding_size">30sp</dimen>
+    <dimen name="booking_detail_name_text_size">20sp</dimen>
+    <dimen name="text_size_15_1">15sp</dimen>
+    <dimen name="booking_detail_name_padding_size">30sp</dimen>
+    <dimen name="booking_detail_date_text_size">20sp</dimen>
+    <dimen name="booking_detail_date_padding_size">7sp</dimen>
+    <dimen name="booking_detail_time_text_size">18sp</dimen>
+    <dimen name="booking_detail_time_padding_size">8sp</dimen>
+
+    <dimen name="size__adaptable">22sp</dimen>
+    <dimen name="padding__adaptable">20sp</dimen>
+
+
+
+    <item name="booking_fragment_dialog_width_percent" format="float" type="integer">0.8</item>
+    <item name="assign_resource_button_bottom_height_percent" format="float" type="integer">0.4
+    </item>
+    <item name="assign_resource_button_top_height_percent" format="float" type="integer">0.4</item>
+    <item name="weight_1_tablet" format="float" type="integer">1</item>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="fragment_horizontal_margin">16dp</dimen>
+    <dimen name="fragment_vertical_margin">16dp</dimen>
+    <dimen name="coupon_left_margin">0dp</dimen>
+
+    <item name="col_number" format="integer" type="integer">1</item>
+
+
+
+    <dimen name="single_table_size">240dp</dimen>
+    <dimen name="table_size">225dp</dimen>
+
+    <dimen name="table_margin">0dp</dimen>
+
+    <dimen name="table_item_size">36dp</dimen>
+    <dimen name="event_actions_dialog_height">500dp</dimen>
+    <dimen name="event_actions_text_size">20sp</dimen>
+    <dimen name="event_actions_text_padding_v">10dp</dimen>
+    <dimen name="event_actions_text_padding_h">10dp</dimen>
+
+
+</resources>

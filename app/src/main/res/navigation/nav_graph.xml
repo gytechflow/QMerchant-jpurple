@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/FirstFragment">
+
+
+    <include app:graph="@navigation/primary_details_nav_graph"/>
+    <include app:graph="@navigation/customers_nav_graph"/>
+    <include app:graph="@navigation/orders_nav_graph"/>
+    <include app:graph="@navigation/tables_nav_graph"/>
+    <include app:graph="@navigation/coupons_nav_graph"/>
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="cm.clear.qmerchant.dashboard.FirstFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_first">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_booking_nav_graph"
+            app:destination="@id/booking_nav_graph" />
+        <action
+            android:id="@+id/action_FirstFragment_to_customers_nav_graph"
+            app:destination="@id/customer_nav_graph" />
+        <action
+            android:id="@+id/action_FirstFragment_to_orders_nav_graph"
+            app:destination="@id/order_nav_graph" />
+        <action
+            android:id="@+id/action_FirstFragment_to_coupons_nav_graph"
+            app:destination="@id/coupons_nav_graph" />
+        <action
+            android:id="@+id/action_FirstFragment_to_setting_nav_graph"
+            app:destination="@id/setting_nav_graph" />
+        <action
+            android:id="@+id/action_FirstFragment_to_tables_nav_graph"
+            app:destination="@id/tablesNavGraph" />
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/SecondFragment"
+        android:name="cm.clear.qmerchant.dashboard.SecondFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_second">
+        <action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+    <include app:graph="@navigation/setting_nav_graph" />
+
+</navigation>

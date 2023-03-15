@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="MEMBER_VIEWHOLDER" type="id" />
+    <item name="STATE" type="id" />
+    <item name="ID" type="id" />
+</resources>

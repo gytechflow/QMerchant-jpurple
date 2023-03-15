@@ -1,0 +1,692 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_detail_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".modules.bookings.bookingDetails.BookingDetailsFragment"
+    tools:ignore="MergeRootFrame">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/nameAndRefLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent=".5"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/booking_item_normal_text_background"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_default="percent"
+                    app:layout_constraintWidth_percent="0.4">
+
+                    <LinearLayout
+                        android:id="@+id/layout_ref_background"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/booking_item_normal_text_background"
+                        android:backgroundTint="@color/blue_transparent"
+                        android:gravity="center"
+                        android:paddingVertical="@dimen/booking_detail_ref_padding_size">
+
+                        <TextView
+                            android:id="@+id/text_ref"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="monospace"
+                            android:text="848"
+                            android:textSize="@dimen/booking_detail_ref_text_size" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_default="percent"
+                    app:layout_constraintWidth_percent="0.6">
+
+                    <LinearLayout
+                        android:id="@+id/layout_name"
+                        android:clickable="true"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:focusable="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:background="@drawable/table_item_text_background"
+                        android:backgroundTint="@color/blue_transparent"
+                        android:layout_marginBottom="2dp"
+                        android:gravity="center"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/text_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="5dp"
+                            android:text="J-purple"
+                            android:textSize="@dimen/booking_detail_name_text_size"
+                            android:textStyle="bold"
+                            android:textColor="@color/secondaryDarkColor"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/table_item_text_background"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/text_email"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="5dp"
+                            android:text="nirvingcraig99@gmail.com"
+                            android:textSize="@dimen/booking_detail_name_text_size" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/bookingDetailsLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent=".5"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/booking_item_normal_text_background"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/nameAndRefLayout">
+
+                <LinearLayout
+                    android:id="@+id/main_phoneContainer"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/table_item_text_background"
+                    android:orientation="horizontal"
+                    android:paddingTop="2dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+
+                        android:layout_marginEnd="2dp"
+                        android:layout_weight="1"
+                        android:paddingVertical="@dimen/booking_detail_time_padding_size">
+
+                        <ImageView
+                            android:id="@+id/image_phone"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_outline_phone_24"
+                            android:textSize="@dimen/booking_detail_time_text_size"
+                            app:tint="@color/secondaryColor" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:layout_weight="5"
+                        android:paddingVertical="@dimen/booking_detail_time_padding_size">
+
+                        <TextView
+                            android:id="@+id/text_phone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="5dp"
+                            android:text="0000"
+                            android:textSize="@dimen/booking_detail_name_text_size" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/main_codeContainer"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/table_item_text_background"
+                    android:orientation="horizontal"
+                    android:paddingTop="2dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/main_phoneContainer">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+
+                        android:layout_marginEnd="2dp"
+                        android:layout_weight="1"
+                        android:paddingVertical="@dimen/booking_detail_time_padding_size">
+
+                        <ImageView
+                            android:id="@+id/image_code"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_baseline_numbers_code_24"
+                            android:textSize="@dimen/booking_detail_time_text_size"
+                            app:tint="@color/secondaryColor" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:layout_weight="5"
+                        android:paddingVertical="@dimen/booking_detail_time_padding_size">
+
+                        <TextView
+                            android:id="@+id/text_code"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="5dp"
+                            android:text="0000"
+                            android:textSize="@dimen/booking_detail_name_text_size" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/main_noteContainer"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@drawable/table_item_text_background"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/main_codeContainer"
+                    android:paddingTop="2dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+
+                        android:layout_weight="1"
+                        android:paddingVertical="@dimen/booking_detail_time_padding_size"
+                        android:layout_marginEnd="2dp">
+
+                        <ImageView
+                            android:id="@+id/image_note"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_outline_short_text_note_24"
+                            app:tint="@color/secondaryColor"
+                            android:textSize="@dimen/booking_detail_time_text_size"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:paddingVertical="@dimen/booking_detail_time_padding_size">
+
+                        <TextView
+                            android:id="@+id/text_note"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="0000"
+                            android:paddingStart="5dp"
+                            android:maxLines="1"
+                            android:textSize="@dimen/booking_detail_name_text_size"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/main_descContainer"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@drawable/table_item_text_background"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/main_noteContainer"
+                    android:paddingTop="2dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+
+                        android:layout_weight="1"
+                        android:paddingVertical="@dimen/booking_detail_time_padding_size"
+                        android:layout_marginEnd="2dp">
+
+                        <ImageView
+                            android:id="@+id/image_description"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_baseline_description_24"
+                            app:tint="@color/secondaryColor"
+                            android:textSize="@dimen/booking_detail_time_text_size"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:paddingVertical="@dimen/booking_detail_time_padding_size">
+
+                        <TextView
+                            android:id="@+id/text_description"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="0000"
+                            android:paddingStart="5dp"
+                            android:maxLines="1"
+                            android:textSize="@dimen/booking_detail_name_text_size"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/layout_progressContainer"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@drawable/table_item_text_background"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:paddingTop="2dp"
+                    app:layout_constraintTop_toBottomOf="@+id/main_descContainer">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+
+                        android:layout_weight="1"
+                        android:paddingVertical="@dimen/booking_detail_time_padding_size"
+                        android:layout_marginEnd="2dp">
+
+                        <ImageView
+                            android:id="@+id/image_progress"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_baseline_published_with_changes_progress_24"
+                            app:tint="@color/secondaryColor"
+                            android:textSize="@dimen/booking_detail_time_text_size"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:layout_weight="5"
+                        android:paddingVertical="@dimen/booking_detail_time_padding_size">
+
+                        <TextView
+                            android:id="@+id/text_progress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="0000"
+                            android:paddingStart="5dp"
+                            android:textSize="@dimen/booking_detail_name_text_size"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/dateAndTimeLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent=".5"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/booking_item_normal_text_background"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/bookingDetailsLayout">
+
+                <LinearLayout
+                    android:id="@+id/main_dateContainer"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/table_item_text_background"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toTopOf="@+id/main_timeContainer"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+
+                        android:layout_marginEnd="2dp"
+                        android:layout_weight="1"
+                        android:paddingVertical="@dimen/booking_detail_time_padding_size">
+
+                        <ImageView
+                            android:id="@+id/image_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_baseline_today_date_24"
+                            app:tint="@color/secondaryColor" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:layout_weight="5"
+                        android:paddingVertical="@dimen/booking_detail_date_padding_size">
+
+                        <TextView
+                            android:id="@+id/text_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="monospace"
+                            android:paddingStart="5dp"
+                            android:text="0000"
+                            android:textSize="@dimen/booking_detail_name_text_size" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/main_timeContainer"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="@id/main_dateContainer"
+                    app:layout_constraintStart_toStartOf="@id/main_dateContainer"
+                    app:layout_constraintTop_toBottomOf="@id/main_dateContainer">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_item_text_background"
+                        android:orientation="horizontal"
+                        android:paddingTop="2dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/main_noteContainer">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+
+                            android:layout_marginEnd="2dp"
+                            android:layout_weight="1"
+                            android:paddingVertical="@dimen/booking_detail_time_padding_size">
+
+                            <ImageView
+                                android:id="@+id/image_startTime"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/ic_outline_play_circle_start_24"
+                                app:tint="@color/secondaryColor" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+
+                            android:layout_weight="5"
+                            android:paddingVertical="@dimen/booking_detail_time_padding_size">
+
+                            <TextView
+                                android:id="@+id/text_startTime"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="5dp"
+                                android:text="0000"
+                                android:textSize="@dimen/booking_detail_name_text_size" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_item_text_background"
+                        android:orientation="horizontal"
+                        android:paddingTop="2dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/main_noteContainer">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+
+                            android:layout_marginEnd="2dp"
+                            android:layout_weight="1"
+                            android:paddingVertical="@dimen/booking_detail_time_padding_size">
+
+                            <ImageView
+                                android:id="@+id/image_endTime"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/ic_outline_stop_circle_stop_24"
+                                android:textSize="@dimen/booking_detail_time_text_size"
+                                app:tint="@color/secondaryColor" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+
+                            android:layout_weight="5"
+                            android:paddingVertical="@dimen/booking_detail_time_padding_size">
+
+                            <TextView
+                                android:id="@+id/text_endTime"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="5dp"
+                                android:text="0000"
+                                android:textSize="@dimen/booking_detail_name_text_size" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <LinearLayout
+                android:id="@+id/layout_tablesContainer"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent=".5"
+                app:layout_constrainedHeight="true"
+                android:layout_marginStart="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/bookingDetailsLayout"
+                app:layout_constraintStart_toEndOf="@+id/dateAndTimeLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="2dp"
+                    android:background="@drawable/booking_default_background">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycler_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:listitem="@layout/item_table_list_content" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_resourceManagement"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="8dp"
+                android:orientation="vertical"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent=".5"
+                app:layout_constraintStart_toEndOf="@+id/dateAndTimeLayout"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layout_tablesContainer">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/booking_item_normal_text_background"
+                    android:gravity="center"
+                    android:paddingVertical="@dimen/booking_detail_time_padding_size">
+
+                    <TextView
+                        android:id="@+id/text_tableCounter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="monospace"
+                        android:text="10/20"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/ref_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_editResource"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/booking_selected_item_table_background"
+                    android:backgroundTint="@color/yellow_gold_transparent"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:paddingVertical="10dp">
+
+                    <TextView
+                        android:id="@+id/text_editResource"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="monospace"
+                        android:text="@string/edit"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/ref_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_assignResource"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/booking_selected_item_table_background"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:paddingVertical="10dp">
+
+                    <TextView
+                        android:id="@+id/text_assignResource"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="monospace"
+                        android:text="@string/assign"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/ref_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_confirmBooking"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/booking_confirm_item_table_background"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:paddingVertical="10dp">
+
+                    <TextView
+                        android:id="@+id/text_confirmResource"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="monospace"
+                        android:text="@string/confirm_text"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/ref_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_removeResource"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/booking_cancel_item_table_background"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:paddingVertical="10dp">
+
+                    <TextView
+                        android:id="@+id/text_removeResource"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="monospace"
+                        android:text="@string/cancel_text"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/ref_size" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

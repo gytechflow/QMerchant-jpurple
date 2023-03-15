@@ -1,0 +1,24 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/orders_enabled"
+        android:icon="@mipmap/ic_orders"
+        android:title="@string/orderEnabled"
+        android:contentDescription="@string/orderEnabled"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/reservations_enabled"
+        android:icon="@mipmap/ic_reservations"
+        android:title="@string/reservationEnabled"
+        android:contentDescription="@string/reservationEnabled"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/more"
+        android:title="@string/moreOptions"
+        android:contentDescription="@string/moreOptions"
+        app:showAsAction="never" />
+
+</menu>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:jp="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewManager"
+            type="cm.clear.qmerchant.modules.tables.ui.TablesViewModel" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".modules.tables.ui.TablesFragment">
+
+        <LinearLayout
+            android:id="@+id/layout_subFilter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/table_item_text_background"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/layout_dateFilter"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="7">
+
+                <LinearLayout
+                    android:id="@+id/layout_selectDate"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="7"
+
+                    android:background="@drawable/booking_default_background">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2">
+
+                        <ImageView
+                            android:id="@+id/image_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_baseline_today_date_24"
+                            app:tint="@color/secondaryColor" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="5">
+
+                        <TextView
+                            android:id="@+id/text_selectDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="monospace"
+                            android:gravity="center"
+                            android:text="12-2-2022"
+                            android:textSize="@dimen/text_size_15_1" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3">
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/switch_dateSort"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:checked="true"
+                            android:gravity="center"
+                            android:textAllCaps="true"
+                            android:visibility="invisible" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_selectTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="7"
+                android:background="@drawable/booking_default_background">
+
+                <com.google.android.material.button.MaterialButtonToggleGroup
+                    android:id="@+id/toggleButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:paddingHorizontal="5dp"
+                    app:selectionRequired="true"
+                    app:singleSelection="false">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/day_btn"
+                        style="@style/test"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:checked="@{viewManager.morning}"
+                        android:gravity="center"
+                        android:onClick="@{()->viewManager.onMorningClicked()}"
+                        android:text="@string/morning"
+                        app:icon="@drawable/ic_baseline_wb_sunny_24" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/night_btn"
+                        style="@style/test"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:checked="@{viewManager.evening}"
+                        android:gravity="center"
+                        android:onClick="@{()->viewManager.onEveningClicked()}"
+                        android:text="@string/evening"
+                        app:icon="@drawable/ic_baseline_mode_night_24" />
+                </com.google.android.material.button.MaterialButtonToggleGroup>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="@integer/col_number"
+            tools:listitem="@layout/table_item" />
+
+    </LinearLayout>
+</layout>

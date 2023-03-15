@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:are="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+    tools:context=".modules.settings.ui.SettingFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:columnCount="1"
+                android:importantForAutofill="yes"
+                android:useDefaultMargins="true">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/visual"
+                        style="?attr/materialButtonOutlinedStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/visual" />
+                    <Button
+                        android:id="@+id/source"
+                        style="?attr/materialButtonOutlinedStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/source" />
+
+                    <Button
+                        android:id="@+id/preview"
+                        style="@style/Widget.MaterialComponents.Button.TextButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Preview"
+                        android:visibility="gone"
+                    />
+
+                </LinearLayout>
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/sourceLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="700dp"
+                            android:layout_weight="1"
+                            android:isScrollContainer="true"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                           >
+
+                            <EditText
+                                android:id="@+id/topic"
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp"
+                                android:layout_weight="1"
+                                android:gravity="top"
+                                android:inputType="text|textMultiLine" />
+
+                            <EditText
+                                android:id="@+id/textField"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="top"
+                                android:inputType="text|textMultiLine" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/VisualLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="700dp"
+                            android:layout_weight="1"
+                            android:isScrollContainer="true"
+                            android:orientation="vertical"
+                            >
+
+
+                            <TextView
+                                android:id="@+id/label"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="TextView"
+                                android:textAlignment="center"
+                                android:textStyle="bold" />
+
+                            <WebView
+                                android:id="@+id/homeweb"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="true" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/PreviewLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:isScrollContainer="true"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+
+                            <ScrollView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_above="@+id/bottombar"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentLeft="true"
+                                android:background="@android:color/white">
+
+
+                                <com.chinalwb.are.AREditor
+                                    android:id="@+id/areditor"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="675dp"
+                                    android:layout_alignParentBottom="true"
+                                    android:background="@android:color/holo_green_dark"
+                                    are:expandMode="MIN"
+                                    are:hideToolbar="true"
+                                    are:toolbarAlignment="TOP">
+
+                                </com.chinalwb.are.AREditor>
+                            </ScrollView>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="horizontal"></LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <Button
+                                    android:id="@+id/apply"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/apply"
+                                    android:visibility="gone" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="horizontal"></LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </ScrollView>
+
+            </GridLayout>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

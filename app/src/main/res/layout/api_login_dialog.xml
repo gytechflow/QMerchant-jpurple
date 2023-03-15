@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/login_dialog_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/primaryColor"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/api_url_and_key"
+            android:textColor="@color/primaryTextColor"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/login_dialog_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:visibility="gone"
+            android:textSize="15dp"/>
+        <EditText
+            android:id="@+id/login_dialog_url"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:hint="@string/server_url"
+            android:background="@drawable/booking_default_background"
+            android:inputType="textEmailAddress"
+            android:padding="10dp"
+            android:textSize="15dp" />
+
+        <EditText
+            android:id="@+id/login_dialog_key"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:hint="@string/api_key"
+            android:background="@drawable/booking_default_background"
+            android:padding="10dp"
+            android:inputType="text"
+            android:textSize="15dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/warning_dialog_cancel_bt"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_margin="15dp"
+                android:background="@drawable/booking_cancel_item_table_background"
+                android:backgroundTint="@color/red_transparent"
+                android:textSize="20dp"
+                android:text="@string/cancel"
+                android:textAllCaps="false"
+                android:layout_weight="1"/>
+            <Button
+                android:id="@+id/warning_dialog_ok_bt"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_margin="15dp"
+                android:background="@drawable/booking_confirm_item_table_background"
+                android:backgroundTint="@color/blue_transparent"
+                android:textSize="20dp"
+                android:textAllCaps="false"
+                android:text="@string/ok"
+                android:layout_weight="1"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

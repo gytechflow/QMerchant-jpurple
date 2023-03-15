@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/edit_customer_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/primaryColor"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/edit"
+            android:textColor="@color/primaryTextColor"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:visibility="invisible"
+            android:id="@+id/progress_bar"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            app:layout_constraintTop_toBottomOf="@+id/layout_dateFilter"
+            app:layout_constraintBottom_toTopOf="@+id/swiperefresh"
+            android:indeterminate="true"
+            android:layout_marginBottom="5dp"
+            android:progressTint="@color/secondaryColor"
+            />
+
+        <TextView
+            android:id="@+id/login_dialog_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:visibility="gone"
+            android:textSize="15dp"/>
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:hint="@string/names"
+            android:background="@drawable/booking_default_background"
+            android:inputType="textEmailAddress"
+            android:padding="10dp"
+            android:textSize="15dp" />
+
+        <EditText
+            android:id="@+id/phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginBottom="15dp"
+            android:hint="@string/phone_number"
+            android:background="@drawable/booking_default_background"
+            android:padding="10dp"
+            android:inputType="text"
+            android:textSize="15dp" />
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:hint="@string/email"
+            android:background="@drawable/booking_default_background"
+            android:padding="10dp"
+            android:inputType="text"
+            android:textSize="15dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/warning_dialog_cancel_bt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="15dp"
+                android:padding="15dp"
+                app:backgroundTint="@color/negative_red"
+                android:background="@drawable/booking_cancel_item_table_background"
+                android:backgroundTint="@color/red_transparent"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:text="@string/cancel_text"
+                android:textAllCaps="false"
+                android:layout_weight="1"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/warning_dialog_ok_bt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="15dp"
+                android:padding="15dp"
+                android:background="@drawable/booking_confirm_item_table_background"
+                android:backgroundTint="@color/blue_transparent"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:textAllCaps="false"
+                android:text="@string/update"
+                android:layout_weight="1"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

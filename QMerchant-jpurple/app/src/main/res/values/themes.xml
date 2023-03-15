@@ -1,0 +1,70 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.QMerchant" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryVariant">@color/primaryDarkColor</item>
+        <item name="colorPrimarySurface">@color/primaryLightColor</item>
+        <item name="colorOnPrimary">@color/primaryTextColor</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/secondaryColor</item>
+        <item name="colorSecondaryVariant">@color/secondaryDarkColor</item>
+        <item name="colorOnSecondary">@color/secondaryTextColor</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Theme.QMerchant.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.QMerchant.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.QMerchant.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="Widget.App.CircularProgressIndicator" parent="Widget.MaterialComponents.CircularProgressIndicator">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.CircularProgressIndicator</item>
+        <item name="trackThickness">20dp</item>
+    </style>
+
+    <style name="ThemeOverlay.App.CircularProgressIndicator" parent="">
+        <item name="trackThickness">15dp</item>
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="percentage_button">
+
+        <item name="background">@drawable/booking_default_background</item>
+        <item name="android:backgroundTint">@color/booking_chips_selector</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:insetLeft">0dp</item>
+
+    </style>
+
+    <style name="custom_dropdown" parent="Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu">
+
+        <item name="shapeAppearance">@drawable/booking_default_background</item>
+        <item name="autoCompleteTextViewStyle">@drawable/table_item_text_background</item>
+        <item name="hintEnabled">true</item>
+        <item name="android:hint">@string/hello_blank_fragment</item>
+
+    </style>
+
+    <style name="QAppSearchView" parent="Widget.AppCompat.SearchView" >
+        <item name="android:textSize">30sp</item>
+        <item name="android:textColor">@color/primaryColor</item>
+    </style>
+
+    <style name="ThemeOverlay.NumberPicker" parent="" >
+        <item name="colorControlNormal">@color/secondaryLightColor</item>
+        <item name="colorPrimary">@color/secondaryLightColor</item>
+        <item name="colorPrimaryDark">@color/secondaryLightColor</item>
+        <item name="colorOnPrimary">@color/white</item>
+    </style>
+
+</resources>

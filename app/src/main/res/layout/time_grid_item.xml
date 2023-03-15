@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="time"
+            type="String" />
+
+        <variable
+            name="margin_top"
+            type="Float" />
+
+        <variable
+            name="height"
+            type="Float" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/main_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layoutHeight="@{height}"
+        app:layoutMarginTop="@{margin_top}"
+        android:orientation="vertical"
+        android:background="@drawable/white_secnd_color_margin_bottom">
+
+        <TextView
+            android:id="@+id/capacity"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:gravity="center"
+            android:text="@{time}"
+            android:textAlignment="center"
+            android:textColor="@color/secondaryDarkColor" />
+
+    </LinearLayout>
+
+</layout>

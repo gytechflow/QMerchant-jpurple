@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="viewManager"
+            type="cm.clear.qmerchant.modules.tables.events.ui.EventsViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".modules.bookings.ui.BookingsFragment"
+        tools:ignore="MergeRootFrame">
+
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/progress_bar"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="5dp"
+            android:indeterminate="true"
+            android:progressTint="@color/secondaryColor"
+            android:visibility="@{viewManager.baseObservable.progressBarVisibility}"
+            app:layout_constraintBottom_toTopOf="@+id/swiperefresh"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swiperefresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constrainedHeight="true"
+            app:setRefreshing="@{viewManager.baseObservable.loading}"
+            app:setOnRefreshListener="@{()->viewManager.refresh()}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/progress_bar">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/booking_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:setAdapter="@{viewManager.adapter}"
+                app:addOnScrollListener="@{viewManager.scrollListener}"
+                app:layout_constrainedHeight="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/progress_bar"
+                app:spanCount="@integer/col_number"
+                tools:listitem="@layout/reduced_booking_item" />
+
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

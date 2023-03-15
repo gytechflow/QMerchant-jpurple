@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_detail_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".modules.bookings.addResource.ui.AddResourceFragment"
+    tools:ignore="MergeRootFrame">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/header_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/table_item_text_background"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintHeight_percent=".2"
+        app:layout_constraintWidth_percent="1">
+
+        <LinearLayout
+            android:id="@+id/header_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/table_item_text_background"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:layout_weight="7"
+                android:background="@drawable/booking_item_normal_text_background">
+
+                <TextView
+                    android:id="@+id/date_and_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="27/11/2021 13:20:00"
+                    android:textSize="@dimen/header_size"
+                    android:gravity="center|start"
+                    android:textAlignment="gravity"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:background="@drawable/booking_default_background">
+
+                <TextView
+                    android:id="@+id/sum_on_total"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:baselineAligned="false"
+                    android:gravity="center"
+                    android:text="11/27"
+                    android:textAlignment="gravity"
+                    android:textSize="@dimen/header_short_text_size" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/header_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="@integer/assign_resource_button_bottom_height_percent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/header_top"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/cancel_button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                style="@style/Widget.MaterialComponents.Button"
+                android:backgroundTint="#EF5350"
+                android:layout_weight="3"
+                android:layout_marginEnd="2dp"
+                android:text="CANCEL"
+                android:textSize="@dimen/resa_size"
+                />
+
+            <Button
+                android:id="@+id/clear_button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                style="@style/Widget.MaterialComponents.Button"
+                android:backgroundTint="@color/secondaryLightColor"
+                android:layout_weight="3"
+                android:layout_marginEnd="2dp"
+                android:text="CLEAR"
+                android:textSize="@dimen/resa_size"
+                />
+
+            <Button
+                android:id="@+id/assign_button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                style="@style/Widget.MaterialComponents.Button"
+                android:backgroundTint="@color/booking_table_selected"
+                android:layout_weight="3"
+                android:layout_marginEnd="2dp"
+                android:text="Assign"
+                android:textSize="@dimen/resa_size"
+                />
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/header_container"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:listitem="@layout/tables_list_item"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

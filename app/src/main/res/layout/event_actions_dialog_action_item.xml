@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="androidx.core.content.ContextCompat" />
+
+        <variable
+            name="viewManager"
+            type="cm.clear.qmerchant.modules.tables.ui.eventactions.EventActionsItemVM" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/table_list_item_text_transparent_background"
+        android:backgroundTint="@color/blue_nontransparent"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
+        android:onClick="@{(view)->viewManager.actionClicked(view)}"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:src="@drawable/listbullet"
+                android:tint="@{ContextCompat.getColor(context, viewManager.actionTextColor)}" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="6"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start|center"
+                android:layout_gravity="start"
+                android:paddingHorizontal="@dimen/event_actions_text_padding_h"
+                android:paddingVertical="@dimen/event_actions_text_padding_v"
+                android:text="@{viewManager.actionName}"
+                android:textColor="@{ContextCompat.getColor(context, viewManager.actionTextColor)}"
+                android:textSize="@dimen/event_actions_text_size"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:indeterminate="true"
+                android:visibility="@{viewManager.actionLoading}"
+                app:indicator_Color="@{ContextCompat.getColor(context, viewManager.actionTint)}" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

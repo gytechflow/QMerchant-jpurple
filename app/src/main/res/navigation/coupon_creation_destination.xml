@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coupon_creation_graph"
+    app:startDestination="@id/show_create_coupon_fragment">
+    <fragment
+        android:id="@+id/show_create_coupon_fragment"
+        android:name="cm.clear.qmerchant.modules.coupons.createCoupon.CreateCoupon"
+        android:label="Create"
+        tools:layout="@layout/fragment_create_coupon">
+        <argument
+            android:name="is_update"
+            android:defaultValue="false"
+            app:argType="boolean" />
+    </fragment>
+</navigation>

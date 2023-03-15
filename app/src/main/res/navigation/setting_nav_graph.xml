@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/setting_nav_graph"
+    app:startDestination="@id/settingFragment">
+
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="cm.clear.qmerchant.modules.settings.ui.SettingFragment"
+        android:label="@string/settings_text"
+        tools:layout="@layout/fragment_setting" >
+        <action
+            android:id="@+id/action_settingFragment_to_notificationsFragment3"
+            app:destination="@id/notificationsFragment" />
+        <action
+            android:id="@+id/action_settingFragment_to_userfragment"
+            app:destination="@id/userfragment" />
+        <action
+            android:id="@+id/action_settingFragment_to_moduleFragment"
+            app:destination="@id/moduleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/notificationsFragment"
+        android:name="cm.clear.qmerchant.modules.settings.notifications.notificationsFragment"
+        android:label="@string/notif"
+        tools:layout="@layout/fragment_notifications" >
+        <action
+            android:id="@+id/action_notificationsFragment_to_editMailFragment22"
+            app:destination="@id/editMailFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/userfragment"
+        android:name="cm.clear.qmerchant.modules.settings.user.User_fragment"
+        android:label="@string/notif"
+        tools:layout="@layout/fragment_user_fragment"
+        >
+
+        <action
+            android:id="@+id/action_userfragment_to_editMailFragment2"
+            app:destination="@id/editMailFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/editMailFragment2"
+        android:name="cm.clear.qmerchant.modules.settings.notifications.editMail.EditMailFragment"
+        tools:layout="@layout/fragment_edit_mail"
+        android:label="Edit" />
+    <fragment
+        android:id="@+id/moduleFragment"
+        android:name="cm.clear.qmerchant.modules.settings.module.ModuleFragment"
+        android:label="@string/module"
+        tools:layout="@layout/fragment_module" />
+</navigation>

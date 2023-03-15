@@ -1,0 +1,23 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:clickable="true"
+    android:foreground="?attr/selectableItemBackground"
+    android:focusable="true"
+    android:id="@+id/layout_removeResource_container_background"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:layout_marginStart="2dp"
+    android:background="@drawable/booking_confirm_item_table_background"
+    android:gravity="center"
+    android:paddingVertical="10dp">
+
+    <TextView
+        android:id="@+id/text_removeResource"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Remove"
+        android:textSize="@dimen/booking_detail_name_text_size"
+        android:fontFamily="monospace"
+        android:textAlignment="center"/>
+
+</LinearLayout>

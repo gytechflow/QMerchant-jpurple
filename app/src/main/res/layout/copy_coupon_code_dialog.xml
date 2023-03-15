@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable name="clickListener"
+            type="android.view.View.OnClickListener"/>
+        <variable name="couponCode"
+            type="String"/>
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/edit_customer_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/primaryColor"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="@string/your_coupon"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/main_expiryDateContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/table_item_text_background"
+                android:orientation="horizontal"
+                android:paddingTop="2dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/table_item_text_background"
+                    android:backgroundTint="@color/primaryDarkColor">
+
+                    <ImageView
+                        android:id="@+id/image_CODE"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_baseline_numbers_code_24"
+                        android:textSize="@dimen/booking_detail_time_text_size"
+                        app:tint="@color/secondaryColor" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="5"
+                    android:background="@drawable/table_item_text_background"
+                    android:backgroundTint="@color/primaryDarkColor"
+                    android:gravity="center"
+                    android:paddingVertical="@dimen/booking_detail_time_padding_size">
+
+                    <TextView
+                        android:id="@+id/text_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="5dp"
+                        android:text="@{couponCode}"
+                        android:textColor="@color/white"
+                        android:textIsSelectable="true"
+                        android:textSize="@dimen/booking_detail_ref_padding_size"
+                        android:textStyle="italic" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/copy_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="2dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:onClick="@{(v)->clickListener.onClick(v)}"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/image_expiry"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingVertical="@dimen/booking_detail_time_padding_size"
+                        android:src="@drawable/ic_baseline_content_copy_24"
+                        android:textSize="@dimen/booking_detail_time_text_size"
+                        app:tint="@color/secondaryColor" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</layout>
